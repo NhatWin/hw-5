@@ -3,10 +3,8 @@
 // in the html.
 
 let currentTime = dayjs();
-const currentHour = currentTime.format("H");
+const currentHour = Number(currentTime.format("H"));
 const currentDate = currentTime.format("MM/DD/YYYY");
-console.log(currentDate);
-console.log(currentHour);
 
 $(document).ready(function () {
   // TODO: Add a listener for click events on the save button. This code should
@@ -22,10 +20,8 @@ $(document).ready(function () {
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
   //
-
   $(".time-block").each(function() {
     const plannerHour = $(this).attr("id").split("-")[1];
-    console.log(plannerHour);
     if (currentHour == plannerHour) {
       $(this).addClass("present");
     } else if (currentHour > plannerHour) {

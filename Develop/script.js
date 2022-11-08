@@ -4,7 +4,7 @@
 
 let currentTime = dayjs();
 const currentHour = Number(currentTime.format("H"));
-const currentDate = currentTime.format("MM/DD/YYYY");
+const currentDate = currentTime.format("MMM DD, YYYY");
 
 $(document).ready(function () {
   // TODO: Add a listener for click events on the save button. This code should
